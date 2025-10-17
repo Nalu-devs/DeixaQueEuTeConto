@@ -29,6 +29,7 @@ div{
 .audio{
     width: 247px;
     height: 40px;
+    display: none;
 }
 
 h1,p{

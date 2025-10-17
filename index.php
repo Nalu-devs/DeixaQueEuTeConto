@@ -29,19 +29,32 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
 
                 <div onclick="playAudio('<?php echo $audioFile; ?>')"><?php echo $audioFile; ?></div>
                 <div class="audio">
-                    <audio id="audioPlayer" controls class="audio">
-                        <source id="audioSource" src="" type="audio/mp3">
-                        Seu navegador não suporta o elemento de áudio.
-                    </audio>
+                    
                 </div>
             </div>
         <?php 
         $i++;
         endforeach; 
         ?>
+        <audio id="audioPlayer" controls class="audio">
+            <source id="audioSource" src="" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+        <input onkeypress="buscar(event)" type="number" id="pesquisa" placeholder="Digite o numero. . .">
     </div>
 
     <script>
+        document.getElementById('pesquisa').focus();
+
+        function buscar(event) {
+        if (event.key === 'Enter') {
+            var input = document.getElementById('pesquisa');
+            var valor = input.value;
+            playAudio(valor+".mp3");
+            input.value = '';
+        }
+    }
+    
         function playAudio(fileName) {
             var audioPlayer = document.getElementById('audioPlayer');
             var audioSource = document.getElementById('audioSource');
