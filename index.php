@@ -53,3 +53,5 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
     </script>
 </body>
 </html>
+
+<!--funcionaria assim os professores teriam um banco de dados de perguntas diversas areas e poderiam criar novas perguntas tbm, ai os alunos poderiam entrar e responder elas para avaliar seus conhecimentos, o diferencial seria filtrar por escola para apenas os alunos de determinada escola responderem as perguntas que o professor gerar, gamificação para quem acertar mais e teria uma parte de redação que vc poderia escrever e uma ia avaliaria para ver se esta bom e etc, publico alvo seria escola, estudantes, quem vai fazer vestibular e etc>
