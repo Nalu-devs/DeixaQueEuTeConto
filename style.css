@@ -1,3 +1,8 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body{
     width: 100%;
     height: auto;
@@ -34,4 +39,18 @@ div{
 
 h1,p{
     text-align: center;
+    border: 1px solid;
+}
+
+.header {
+    margin: 0;
+    width: 100%;
+}
+
+.pesquisa{
+    height: 30px;
+    width: 15%;
+    margin-left: 3%;
+    margin-top: 3%;
+    border: 1px solid;
 }

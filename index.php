@@ -11,10 +11,20 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deixa que eu te conto</title>
     <link rel="stylesheet" href="style.css">
+    <link href="bootstrap.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Deixa que eu te conto</h1>
-    <p>Selecione um número e ouça seu conto</p>
+    <div class="header">
+        <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <form class="d-flex" role="search">
+            <input style="margin-top:10%" id="pesquisa" onkeypress="buscar(event)" class="form-control me-2" type="number" placeholder="Digite o numero. . ." aria-label="Search"/>
+            </form>
+            <h1>Deixa que eu te conto</h1>
+
+        </div>
+        </nav>
+    </div>
 
     <div class="conteudo">
         <?php 
@@ -40,9 +50,8 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
             <source id="audioSource" src="" type="audio/mp3">
             Seu navegador não suporta o elemento de áudio.
         </audio>
-        <input onkeypress="buscar(event)" type="number" id="pesquisa" placeholder="Digite o numero. . .">
     </div>
-
+    <script src="bootstrap.js"></script>
     <script>
         document.getElementById('pesquisa').focus();
 
@@ -66,5 +75,3 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
     </script>
 </body>
 </html>
-
-<!--funcionaria assim os professores teriam um banco de dados de perguntas diversas areas e poderiam criar novas perguntas tbm, ai os alunos poderiam entrar e responder elas para avaliar seus conhecimentos, o diferencial seria filtrar por escola para apenas os alunos de determinada escola responderem as perguntas que o professor gerar, gamificação para quem acertar mais e teria uma parte de redação que vc poderia escrever e uma ia avaliaria para ver se esta bom e etc, publico alvo seria escola, estudantes, quem vai fazer vestibular e etc>
