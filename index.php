@@ -20,7 +20,7 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
             <form class="d-flex" role="search">
             <input style="margin-top:10%" id="pesquisa" onkeypress="buscar(event)" class="form-control me-2" type="number" placeholder="Digite o numero. . ." aria-label="Search"/>
             </form>
-            <h1>Deixa que eu te conto</h1>
+            <h1>Deixa que eu te conto!</h1>
 
         </div>
         </nav>
