@@ -9,9 +9,9 @@ body{
     font-family:'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* div{
+div{
     border: 1px solid;
-} */
+}
 
 .conteudo{
     height: 100%;
@@ -52,13 +52,10 @@ h1,p{
     text-align: center;
 }
 
-h1{
-    margin-left: 26%;
-}
-
-.header {
+header {
     margin: 0;
     width: 100%;
+    background-color: #1e0492;
 }
 
 .pesquisa{
@@ -82,24 +79,27 @@ h1{
 }
 
 
-input[type="number"] {
+input{
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 8px 12px;
   font-size: 16px;
   outline: none;
-  width: 100%;
-  margin-top:10%;
-  margin-left:10%;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-input[type="number"]:focus {
+input:focus {
   border-color: #1e0492;
   box-shadow: 0 0 5px rgba(3, 6, 161, 0.5);
 }
