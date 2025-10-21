@@ -84,11 +84,11 @@ h1{
 
 input[type="number"] {
   border: 2px solid #ccc;
-  border-radius: 10px;        /* borda arredondada */
+  border-radius: 10px;
   padding: 8px 12px;
   font-size: 16px;
   outline: none;
-  width: 100%;               /* ajuste como quiser */
+  width: 100%;
   margin-top:10%;
   margin-left:10%;
 }
