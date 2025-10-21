@@ -3,6 +3,8 @@ $imgDir = 'img/';
 $imgFiles = array_values(array_diff(scandir($imgDir), array('.', '..'))); // corrigido aqui
 $audioDir = 'audios/';
 $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
+$nomeDir = 'nome/';
+$nomeFiles = array_values(array_diff(scandir($nomeDir), array('.', '..')));
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -14,11 +16,11 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
     <link href="bootstrap.css" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
+    <div style="margin-top:2%" class="header">
         <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">
             <form class="d-flex" role="search">
-            <input style="margin-top:10%" id="pesquisa" onkeypress="buscar(event)" class="form-control me-2" type="number" placeholder="Digite o numero. . ." aria-label="Search"/>
+            <input id="pesquisa" onkeypress="buscar(event)" class="form-control me-2" type="number" placeholder="Digite o número do conto. . ." aria-label="Search"/>
             </form>
             <h1>Deixa que eu te conto!</h1>
 
@@ -33,11 +35,15 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
             $imgFile = $imgFiles[$i] ?? "";//existe? se n retorna vazio
         ?>
             <div class="card">
-                <div class="img">
+                <div class="cardNome">
+                    .
+                </div>
+
+                <div class="cardImg">
                     <img src="img/<?php echo $imgFile; ?>" alt="Imagem do conto" class="img">
                 </div>
 
-                <div onclick="playAudio('<?php echo $audioFile; ?>')"><?php echo $audioFile; ?></div>
+                <div class="descricao" onclick="playAudio('<?php echo $audioFile; ?>')"><?php echo $audioFile; ?></div>
                 <div class="audio">
                     
                 </div>
@@ -51,7 +57,7 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
             Seu navegador não suporta o elemento de áudio.
         </audio>
     </div>
-    <script src="bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('pesquisa').focus();
 
