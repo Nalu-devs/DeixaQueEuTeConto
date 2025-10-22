@@ -13,6 +13,7 @@ $audioFiles = array_values(array_diff(scandir($audioDir), array('.', '..')));
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <header>
         <h1>Deixa que eu te conto</h1>
         <input onkeypress="buscar(event)" type="number" id="pesquisa" placeholder="Digite o numero. . .">
