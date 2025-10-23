@@ -29,6 +29,7 @@ body {
     padding: 1% 0 5% 0;
     margin: 0 auto;
     margin-top: 3%;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
 }
 
 .audio {
