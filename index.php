@@ -42,9 +42,11 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
                 <div class="cardTitulo">
                     <p>Livro: <?php echo "$title";?></p>
                 </div>
+                <hr>
                 <div class="cardNome">
                     <p>Por: <?php echo "$escritor";?></p>
                 </div>
+                <hr>
                 <div class="descricao" onclick="playAudio('<?php echo $audioFile; ?>')">
                     <?php echo "Digite: ".pathinfo($audioFile, PATHINFO_FILENAME); ?>
                 </div>
