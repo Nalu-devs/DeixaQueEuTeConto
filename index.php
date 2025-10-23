@@ -22,7 +22,22 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
         <img src="logo.png" class="logo">
         <input onkeypress="buscar(event)" type="number" id="pesquisa" placeholder="Digite o número de telefone. . .">
     </header>
-    <div class="conteudo">
+    <div class="tela-agradecimento" id="tela-agradecimento">
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+        <p>Ana</p>
+    </div>
+    <div class="conteudo" id="conteudo">
         <?php 
         $i = 0;
         
@@ -40,14 +55,14 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
                     <img src="img/<?php echo $imgFile; ?>" alt="Imagem do conto" class="img">
                 </div>
                 <div class="cardTitulo">
-                    <p>Livro: <?php echo "$title";?></p>
+                    <p>Conto: <?php echo "$title";?></p>
                 </div>
                 <hr>
                 <div class="cardNome">
                     <p>Por: <?php echo "$escritor";?></p>
                 </div>
                 <hr>
-                <div class="descricao" onclick="playAudio('<?php echo $audioFile; ?>')">
+                <div class="descricao" onkeypress="playAudio('<?php echo $audioFile; ?>')">
                     <?php echo "Digite: ".pathinfo($audioFile, PATHINFO_FILENAME); ?>
                 </div>
 
@@ -77,11 +92,22 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
         function playAudio(fileName) {
             var audioPlayer = document.getElementById('audioPlayer');
             var audioSource = document.getElementById('audioSource');
-            
+            const conteudo = document.getElementById('conteudo');
+            const tela_agradecimento = document.getElementById('tela-agradecimento');
+
             audioSource.src = 'audios/' + fileName;
             audioPlayer.load(); 
-            audioPlayer.play(); 
-        }
+            audioPlayer.play();
+
+            audioPlayer.onended = function() {
+            conteudo.style.transition = "all 2s";
+            conteudo.style.opacity = "0";
+
+            tela_agradecimento.style.transition = "all 3s";
+            tela_agradecimento.style.opacity = "1";
+        };
+            
+    }
     </script>
 </body>
 </html>
