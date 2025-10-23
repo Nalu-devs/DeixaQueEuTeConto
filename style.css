@@ -76,6 +76,7 @@ header{
     background-color: #669bbc;
     padding-bottom: 1%;
     display: flex;
+    border-radius: 0 0 30px 30px;
 }
 
 h1{
