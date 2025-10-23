@@ -127,7 +127,5 @@ input:focus {
     border: 2px solid black;
     left: 50%;
     transform: translate(-50%, 0);
-    top: 50%;
-    
     opacity: 0;
 }
