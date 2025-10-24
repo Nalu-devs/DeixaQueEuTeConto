@@ -34,10 +34,10 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
         <p style="margin-left: 10px">Emanuelly Guimãres Venâncio - 2º infonet</p>
     </div>
     <div class="conteudo" id="conteudo">
-        <?php 
+        <?php
         $i = 0;
-        
-        foreach ($audioFiles as $audioFile): 
+       
+        foreach ($audioFiles as $audioFile):
             $imgFile = $imgFiles[$i] ?? "";//existe? se n retorna vazio
             $nomeFile = $nomeFiles[$i] ?? "";
             $escritor = "";
@@ -61,21 +61,21 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
                 <div class="descricao" onkeypress="playAudio('<?php echo $audioFile; ?>')">
                     <?php echo "Digite: ".pathinfo($audioFile, PATHINFO_FILENAME); ?>
                 </div>
-
+ 
             </div>
-        <?php 
+        <?php
         $i++;
-        endforeach; 
+        endforeach;
         ?>
         <audio id="audioPlayer" controls class="audio">
             <source id="audioSource" src="" type="audio/mp3">
             Seu navegador não suporta o elemento de áudio.
         </audio>
     </div>
-
+ 
     <script>
         document.getElementById('pesquisa').focus();
-
+ 
         function buscar(event) {
         if (event.key === 'Enter') {
             var input = document.getElementById('pesquisa');
@@ -84,36 +84,36 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
             input.value = '';
         }
     }
-
+ 
         function playAudio(fileName) {
             var audioPlayer = document.getElementById('audioPlayer');
             var audioSource = document.getElementById('audioSource');
             const conteudo = document.getElementById('conteudo');
             const tela_agradecimento = document.getElementById('tela-agradecimento');
-
+ 
             audioSource.src = 'audios/' + fileName;
-            audioPlayer.load(); 
+            audioPlayer.load();
             audioPlayer.play();
-
+ 
             audioPlayer.onended = function() {
             conteudo.style.transition = "all 2s";
             conteudo.style.opacity = "0";
-
+ 
             tela_agradecimento.style.transition = "all 3s";
             tela_agradecimento.style.opacity = "1";
-
+ 
             setTimeout(function() {
-                tela_agradecimento.style.transition = "all 3s";
+                tela_agradecimento.style.transition = "all 2s";
                 tela_agradecimento.style.opacity = "0";
-            }, 5000);
-
-
+            }, 6000);
+ 
+ 
             setTimeout(function() {
                 conteudo.style.transition = "all 2s";
                 conteudo.style.opacity = "1";
-            }, 8000);
+            }, 6500);
 };
-            
+           
     }
     </script>
 </body>
