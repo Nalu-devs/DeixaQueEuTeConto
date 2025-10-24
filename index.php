@@ -23,19 +23,15 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
         <input onkeypress="buscar(event)" type="number" id="pesquisa" placeholder="Digite o número de telefone. . .">
     </header>
     <div class="tela-agradecimento" id="tela-agradecimento">
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
-        <p>Ana</p>
+        <p class="tituloTelaAgradecimento">Agradecimentos especiais</p>
+        <p style="margin-left: 10px">Ana Lúcia Cavalcante Sirino - 2º infonet</p>
+        <p style="margin-left: 10px">Luka de Moura Sanches - 2º infonet</p>
+        <p style="margin-left: 10px">Bárbara Fontanezzi Algarra - 2º infonet</p>
+        <p style="margin-left: 10px">Maria Eduarda Silva de Souza - 2º infonet</p>
+        <p style="margin-left: 10px">Isaac Gabriel Vieira Alves - 2º infonet</p>
+        <p style="margin-left: 10px">Miguel Angelo Monteiro Vicente - 2º infonet</p>
+        <p style="margin-left: 10px">Ana Vitória de Oliveira - 2º infonet</p>
+        <p style="margin-left: 10px">Emanuelly Guimãres Venâncio - 2º infonet</p>
     </div>
     <div class="conteudo" id="conteudo">
         <?php 
@@ -105,7 +101,18 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
 
             tela_agradecimento.style.transition = "all 3s";
             tela_agradecimento.style.opacity = "1";
-        };
+
+            setTimeout(function() {
+                tela_agradecimento.style.transition = "all 3s";
+                tela_agradecimento.style.opacity = "0";
+            }, 5000);
+
+
+            setTimeout(function() {
+                conteudo.style.transition = "all 2s";
+                conteudo.style.opacity = "1";
+            }, 8000);
+};
             
     }
     </script>
