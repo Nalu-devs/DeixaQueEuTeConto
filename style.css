@@ -12,6 +12,7 @@ body {
     width: 100%;
     height: auto;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #edf2fb;
 }
  
 .conteudo {
@@ -20,8 +21,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     opacity: 1;
-    background-image: url(img/fundo.png);
-    background-position:center;
 }
 .card {
     border: 1px solid;
@@ -32,6 +31,7 @@ body {
     margin: 0 auto;
     margin-top: 3%;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    background-color: #ebebeb;
 }
  
 .audio {
@@ -64,7 +64,7 @@ hr{
     font-weight: bold;
     margin: 0 auto;
     border-radius: 20px;
-    background-color: #013e8d;
+    background-color: #004aad;
     color: white;
 }
  
@@ -120,20 +120,30 @@ input:focus {
  
 .tela-agradecimento{
     position: fixed;
-    width: 25%;
-    height: 400px;
+    width: 45%;
+    height: 520px;
     border: 2px solid black;
     border-radius: 10px;
-    background-color: #669bbc;
-    color: white;
+    background-color: #f8f7ff;
     left: 50%;
     top: 25%;
     transform: translate(-50%, 0);
     opacity: 0;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
 }
+
+.imagemAgradecimento{
+    display: flex;
+    width: 264px;
+    height: 478px;
+    margin-top: 10%;
+}
+
  
 .tituloTelaAgradecimento{
     font-size: 30px;
     font-weight: bold;
-    text-align: center;
+    margin-left: 10px;
 }
