@@ -20,7 +20,7 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
 <body>
     <header>
         <img src="logo.png" class="logo">
-        <input onkeypress="buscar(event)" type="number" id="pesquisa" placeholder="Digite o número de telefone. . .">
+        <input onkeypress="buscar(event)" type="number" id="pesquisa" placeholder="Histórias que merecem ser ouvidas - Deixa que eu te conto">
     </header>
     <div class="tela-agradecimento" id="tela-agradecimento">
         <div class="imagemAgradecimento">
@@ -65,6 +65,13 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
                 <hr>
                 <div class="descricao" onkeypress="playAudio('<?php echo $audioFile; ?>')">
                     <?php echo "Digite: ".pathinfo($audioFile, PATHINFO_FILENAME); ?>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="margin-left:10px; margin-bottom:7px" width="24" height="24" fill="none" stroke="#669bbc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 17v-3a9 9 0 0 1 18 0v3" />
+                    <rect x="2" y="14" width="4" height="7" rx="1" />
+                    <rect x="18" y="14" width="4" height="7" rx="1" />
+                    </svg>
+
+
                 </div>
  
             </div>
