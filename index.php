@@ -18,7 +18,7 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
     <link rel="icon" href="logo.png">
 </head>
 <body>
-    <header>
+    <header id="header">
         <img src="logo.png" class="logo">
         <input onkeypress="buscar(event)" type="number" id="pesquisa" placeholder="Histórias que merecem ser ouvidas - Deixa que eu te conto">
     </header>
@@ -54,8 +54,9 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
             $tituloFile = $tituloFiles[$i] ?? "";
             $title = "";
             $title = file_get_contents($tituloDir . $tituloFile);
+            $id = pathinfo($audioFile, PATHINFO_FILENAME);
         ?>
-            <div id="card" class="card">
+            <div id="card<?php echo $id?>" class="card">
                 <div class="img">
                     <img src="img/<?php echo $imgFile; ?>" alt="Imagem do conto" class="img">
                 </div>
@@ -102,20 +103,30 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
             var audioPlayer = document.getElementById('audioPlayer');
             var audioSource = document.getElementById('audioSource');
             const conteudo = document.getElementById('conteudo');
+            const id = fileName.replace(".mp3","");
             const tela_agradecimento = document.getElementById('tela-agradecimento');
-            const card = document.getElementById('card');
- 
+            const cardSelecionado = document.getElementById('card' + id);
+            const todosCards = document.querySelectorAll('.card');
+
+            console.log(fileName);
+            console.log(fileName.replace(".mp3",""));
             audioSource.src = 'audios/' + fileName;
             audioPlayer.load();
             audioPlayer.play();
 
-            audioPlayer.onplay = function(){
-                card.style.transition = "all 1s";
-                
-                card.style.width = "70%";
-                card.style.height = "1000px"
-            }
- 
+            audioPlayer.onplay = function() {
+                todosCards.forEach(card => {
+                    if (card !== cardSelecionado) {
+                        card.style.borderColor = "black";
+                        card.style.boxShadow = "none";
+                    } else {
+                        card.style.borderColor = "red";
+                        card.style.borderColor = "5px 5px 10px #004aad";
+                    }
+                });
+            };
+
+
             audioPlayer.onended = function() {
 
                 tela_agradecimento.style.transition = "all 3s";
@@ -137,3 +148,8 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
     </script>
 </body>
 </html>
+<!-- 
+Parte de conversa
+
+consegue ver  o chat 
+sim -->
