@@ -36,6 +36,10 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
             <p style="margin-left: 10px">Miguel Angelo Monteiro Vicente - 2º infonet</p>
             <p style="margin-left: 10px">Ana Vitória de Oliveira - 2º infonet</p>
             <p style="margin-left: 10px">Emanuelly Guimãres Venâncio - 2º infonet</p>
+            <p style="margin-left: 10px">Amanda Domeneck - 2º itinerário formativo</p>
+            <p style="margin-left: 10px">Isabelle Vitória Azevedo dos Santos - 2º itinerário formativo</p>
+            <p style="margin-left: 10px">Lavínia Avalo de Souza Matos - 2º itinerário formativo</p>
+            <p style="margin-left: 10px">Iasmim Honório - 2º itinerário formativo</p>
         </div>
     </div>
     <div class="conteudo" id="conteudo">
@@ -51,7 +55,7 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
             $title = "";
             $title = file_get_contents($tituloDir . $tituloFile);
         ?>
-            <div class="card">
+            <div id="card" class="card">
                 <div class="img">
                     <img src="img/<?php echo $imgFile; ?>" alt="Imagem do conto" class="img">
                 </div>
@@ -70,10 +74,7 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
                     <rect x="2" y="14" width="4" height="7" rx="1" />
                     <rect x="18" y="14" width="4" height="7" rx="1" />
                     </svg>
-
-
                 </div>
- 
             </div>
         <?php
         $i++;
@@ -102,28 +103,34 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
             var audioSource = document.getElementById('audioSource');
             const conteudo = document.getElementById('conteudo');
             const tela_agradecimento = document.getElementById('tela-agradecimento');
+            const card = document.getElementById('card');
  
             audioSource.src = 'audios/' + fileName;
             audioPlayer.load();
             audioPlayer.play();
+
+            audioPlayer.onplay = function(){
+                card.style.transition = "all 1s";
+                
+                card.style.width = "70%";
+                card.style.height = "1000px"
+            }
  
             audioPlayer.onended = function() {
-            conteudo.style.transition = "all 2s";
-            conteudo.style.opacity = "0";
- 
-            tela_agradecimento.style.transition = "all 3s";
-            tela_agradecimento.style.opacity = "1";
- 
-            setTimeout(function() {
-                tela_agradecimento.style.transition = "all 2s";
-                tela_agradecimento.style.opacity = "0";
-            }, 6000);
- 
- 
-            setTimeout(function() {
-                conteudo.style.transition = "all 2s";
-                conteudo.style.opacity = "1";
-            }, 6500);
+
+                tela_agradecimento.style.transition = "all 3s";
+                tela_agradecimento.style.opacity = "1";
+    
+                setTimeout(function() {
+                    tela_agradecimento.style.transition = "all 2s";
+                    tela_agradecimento.style.opacity = "0";
+                }, 6000);
+    
+                setTimeout(function() {
+                    conteudo.style.transition = "all 2s";
+                    conteudo.style.opacity = "1";
+                }, 6500);
+
 };
            
     }
