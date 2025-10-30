@@ -169,8 +169,3 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
     </script>
 </body>
 </html>
-<!-- 
-Parte de conversa
-
-consegue ver  o chat 
-sim -->
