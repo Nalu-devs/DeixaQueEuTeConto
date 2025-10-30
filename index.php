@@ -93,11 +93,21 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
         function buscar(event) {
         if (event.key === 'Enter') {
             var input = document.getElementById('pesquisa');
-            var valor = input.value;
-            playAudio(valor+".mp3");
+            var valor = input.value.trim();
+            var filePath = 'audios/' + valor + '.mp3';
+
+            fetch(filePath)
+                .then(response => {
+                    if (response.ok) {
+                        playAudio(valor + ".mp3");
+                    } else {
+                        alert("O conto número " + valor + " não existe. Digite da mesma forma que está destacado");
+                    }
+                })
             input.value = '';
         }
     }
+
  
         function playAudio(fileName) {
             var audioPlayer = document.getElementById('audioPlayer');
