@@ -158,7 +158,7 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
                         card.style.borderColor = "black";
                         card.style.borderColor = "5px 5px 10px #004aad";
                 });
-                }, 6000);
+                }, 15000);
     
                 setTimeout(function() {
                     conteudo.style.opacity = "1"; // e aq
