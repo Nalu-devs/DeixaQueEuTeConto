@@ -123,7 +123,7 @@ input:focus {
     position: fixed;
     width: 45%;
     height: 520px;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     background-color: #f8f7ff;
     left: 50%;
