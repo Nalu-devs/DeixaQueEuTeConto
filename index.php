@@ -101,7 +101,7 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
                     if (response.ok) {
                         playAudio(valor + ".mp3");
                     } else {
-                        alert("O conto número " + valor + " não existe. Digite da mesma forma que está destacado");
+                        alert("Esse conto não existe. Digite da mesma forma que está destacado");
                     }
                 })
             input.value = '';
