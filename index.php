@@ -131,17 +131,21 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
 
                 tela_agradecimento.style.transition = "all 3s";
                 tela_agradecimento.style.opacity = "1";
-    
+                conteudo.style.transition = "all 3s";
+                conteudo.style.opacity = "0.05";
+                
                 setTimeout(function() {
                     tela_agradecimento.style.transition = "all 2s";
                     tela_agradecimento.style.opacity = "0";
+                    todosCards.forEach(card => {
+                        card.style.borderColor = "black";
+                        card.style.borderColor = "5px 5px 10px #004aad";
+                });
                 }, 6000);
     
                 setTimeout(function() {
-                    conteudo.style.transition = "all 2s";
-                    conteudo.style.opacity = "1";
+                    conteudo.style.opacity = "1"; // e aq
                 }, 6500);
-
 };
            
     }
