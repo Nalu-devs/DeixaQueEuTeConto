@@ -127,22 +127,29 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
             audioPlayer.onplay = function() {
                 todosCards.forEach(card => {
                     if (card !== cardSelecionado) {
+                        card.style.border = "1px solid";
                         card.style.borderColor = "black";
                         card.style.boxShadow = "none";
                     } else {
-                        card.style.borderColor = "red";
-                        card.style.borderColor = "5px 5px 10px #004aad";
+                        card.style.border = "2px solid";
+                        card.style.borderColor = "#004aad";
+                        card.style.boxShadow = "5px 5px 10px #669bbc";
                     }
                 });
             };
 
 
             audioPlayer.onended = function() {
+                todosCards.forEach(card => {
+                    card.style.border = "1px solid";
+                    card.style.borderColor = "black";
+                    card.style.boxShadow = "5px 5px 10px rgba(0,0,0,0.5)";
+                });
 
                 tela_agradecimento.style.transition = "all 3s";
                 tela_agradecimento.style.opacity = "1";
                 conteudo.style.transition = "all 3s";
-                conteudo.style.opacity = "0.05";
+                conteudo.style.opacity = "0";
                 
                 setTimeout(function() {
                     tela_agradecimento.style.transition = "all 2s";
