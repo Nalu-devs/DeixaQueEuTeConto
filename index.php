@@ -28,18 +28,19 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
         </div>
         <div class="textoAgradecimento">
             <p class="tituloTelaAgradecimento">Agradecimentos especiais</p>
-            <p style="margin-left: 10px">Luka de Moura Sanches - 2º infonet</p>
-            <p style="margin-left: 10px">Bárbara Fontanezzi Algarra - 2º infonet</p>
-            <p style="margin-left: 10px">Maria Eduarda Silva de Souza - 2º infonet</p>
-            <p style="margin-left: 10px">Isaac Gabriel Vieira Alves - 2º infonet</p>
-            <p style="margin-left: 10px">Miguel Angelo Monteiro Vicente - 2º infonet</p>
-            <p style="margin-left: 10px">Ana Vitória de Oliveira - 2º infonet</p>
-            <p style="margin-left: 10px">Emanuelly Guimãres Venâncio - 2º infonet</p>
-            <p style="margin-left: 10px">Amanda Domeneck - 2º itinerário formativo</p>
-            <p style="margin-left: 10px">Isabelle Vitória Azevedo dos Santos - 2º itinerário formativo</p>
-            <p style="margin-left: 10px">Lavínia Avalo de Souza Matos - 2º itinerário formativo</p>
-            <p style="margin-left: 10px">Iasmim Honório - 2º itinerário formativo</p>
-            <p style="margin-left: 10px">Ana Lúcia Cavalcante Sirino - 2º infonet</p>
+            <p style="margin-left: 10px">Luka de Moura Sanches - 2º Infonet</p>
+            <p style="margin-left: 10px">Bárbara Fontanezzi Algarra - 2º Infonet</p>
+            <p style="margin-left: 10px">Maria Eduarda Silva de Souza - 2º Infonet</p>
+            <p style="margin-left: 10px">Isaac Gabriel Vieira Alves - 2º Infonet</p>
+            <p style="margin-left: 10px">Miguel Angelo Monteiro Vicente - 2º Infonet</p>
+            <p style="margin-left: 10px">Ana Vitória de Oliveira - 2º Infonet</p>
+            <p style="margin-left: 10px">Emanuelly Guimãres Venâncio - 2º Infonet</p>
+            <p style="margin-left: 10px">Amanda Domeneck - 2º Administração</p>
+            <p style="margin-left: 10px">Isabelle Vitória Azevedo dos Santos - 2º Administração</p>
+            <p style="margin-left: 10px">Lavínia Avalo de Souza Matos - 2º Administração</p>
+            <p style="margin-left: 10px">Iasmim Honório Lulu - 2º Administração</p>
+            <p style="margin-left: 10px">Mariane Ortega Sales - 1º Intinerário Formativo</p>
+            <p style="margin-left: 10px">Ana Lúcia Cavalcante Sirino - 2º Infonet</p>
         </div>
     </div>
     <div class="conteudo" id="conteudo">
