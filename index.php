@@ -28,7 +28,6 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
         </div>
         <div class="textoAgradecimento">
             <p class="tituloTelaAgradecimento">Agradecimentos especiais</p>
-            <p style="margin-left: 10px">Ana Lúcia Cavalcante Sirino - 2º infonet</p>
             <p style="margin-left: 10px">Luka de Moura Sanches - 2º infonet</p>
             <p style="margin-left: 10px">Bárbara Fontanezzi Algarra - 2º infonet</p>
             <p style="margin-left: 10px">Maria Eduarda Silva de Souza - 2º infonet</p>
@@ -40,6 +39,7 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
             <p style="margin-left: 10px">Isabelle Vitória Azevedo dos Santos - 2º itinerário formativo</p>
             <p style="margin-left: 10px">Lavínia Avalo de Souza Matos - 2º itinerário formativo</p>
             <p style="margin-left: 10px">Iasmim Honório - 2º itinerário formativo</p>
+            <p style="margin-left: 10px">Ana Lúcia Cavalcante Sirino - 2º infonet</p>
         </div>
     </div>
     <div class="conteudo" id="conteudo">
@@ -162,7 +162,7 @@ $tituloFiles = array_values(array_diff(scandir($tituloDir), array('.', '..')));
     
                 setTimeout(function() {
                     conteudo.style.opacity = "1"; // e aq
-                }, 6500);
+                }, 15000);
 };
            
     }
